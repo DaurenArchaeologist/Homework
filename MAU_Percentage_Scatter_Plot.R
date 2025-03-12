@@ -9,7 +9,7 @@ library(stringr)
 
 #Choose specimen and repeat the process for each
 specimen <- read_excel("/Users/kisa/downloads/Lab 7 Data.xlsx", sheet = "Сervus elaphus")
-specimen <- read_excel("/Users/kisa/downloads/Lab 7 Data.xlsx", sheet = "Capra caucasia")
+specimen <- read_excel("/Users/kisa/downloads/Lab 7 Data.xlsx", sheet = "Capra caucasica")
 specimen <- read_excel("/Users/kisa/downloads/Lab 7 Data.xlsx", sheet = "Bison priscus")
 
 specimen <- specimen %>%
@@ -31,9 +31,9 @@ plot_specimen <- ggplot(specimen, aes(x = MAU_UP_Percentage, y = MAU_MP_Percenta
   geom_point(size = 5, alpha = 0.9, stroke = 1.2) +  
   scale_color_manual(values = group_colors) +
   scale_shape_manual(values = group_shapes) +
-  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red", size = 1) + 
-#Change title for each specimen: 1) Cervus elaphus; 2) Capra caucasia; 3) Bison priscus.
-  labs(title = "%MAU Comparison for Cervus elaphus",
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red", linewidth = 1) + 
+#Change title for each specimen: 1) Cervus elaphus; 2) Capra caucasica; 3) Bison priscus.
+  labs(title = "%MAU Comparison for Capra caucasica",
        subtitle = "Lab 7 Station 6 Dauren Kissabayev",
        x = "Upper Paleolithic (%MAU)",
        y = "Middle Paleolithic (%MAU)",
